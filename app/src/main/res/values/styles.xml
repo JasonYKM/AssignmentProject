@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+    <style name="AppTheme.BackgroundImageStyle">
+        <item name="android:gravity">top</item>
+        <item name="android:src">@drawable/background_img</item>
+    </style>
+    <style name="Button">
+
+    </style>
+</resources>

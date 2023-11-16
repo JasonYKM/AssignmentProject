@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/profile"
+            android:title="Profile" />
+        <item android:id="@+id/home"
+            android:title="Home"
+            android:icon="@drawable/home_icon"/>
+        <item android:id="@+id/dailyTab"
+            android:title="Daily Insights"
+            android:icon="@drawable/daily_icon"/>
+        <item android:id="@+id/finInsight"
+            android:title="Financial Insights"
+            android:icon="@drawable/insight_icon"/>
+        <item android:id="@+id/savingsGoal"
+            android:title="Saving's Goal"
+            android:icon="@drawable/goals_icon"/>
+        <item android:id="@+id/reminder"
+            android:title="Reminders"
+            android:icon="@drawable/reminder_icon"/>
+        <item android:id="@+id/exchangeRate"
+            android:title="Exchange Rate"
+            android:icon="@drawable/exchange_icon"/>
+        <item android:id="@+id/decision"
+            android:title="Purchase Decision"
+            android:icon="@drawable/decision_icon"/>
+    </group>
+</menu>
