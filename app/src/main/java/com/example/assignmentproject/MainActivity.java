@@ -44,28 +44,26 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
             // Handle item clicks here
-            if(item.getItemId() == R.id.profile){
-                Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
-            }
+
             if(item.getItemId() == R.id.home){
                 Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
             }
-            if(item.getItemId() == R.id.dailyTab){
+            else if(item.getItemId() == R.id.dailyTab){
                 Toast.makeText(this, "Daily", Toast.LENGTH_SHORT).show();
             }
-            if(item.getItemId() == R.id.finInsight){
+            else if(item.getItemId() == R.id.finInsight){
                 Toast.makeText(this, "Insight", Toast.LENGTH_SHORT).show();
             }
-            if(item.getItemId() == R.id.savingsGoal){
+            else if(item.getItemId() == R.id.savingsGoal){
                 Toast.makeText(this, "Saving", Toast.LENGTH_SHORT).show();
             }
-            if(item.getItemId() == R.id.reminder){
+            else if(item.getItemId() == R.id.reminder){
                 Toast.makeText(this, "Reminder", Toast.LENGTH_SHORT).show();
             }
-            if(item.getItemId() == R.id.exchangeRate){
+            else if(item.getItemId() == R.id.exchangeRate){
                 Toast.makeText(this, "Exchange", Toast.LENGTH_SHORT).show();
             }
-            if(item.getItemId() == R.id.decision){
+            else if(item.getItemId() == R.id.decision){
                 Toast.makeText(this, "Decision", Toast.LENGTH_SHORT).show();
             }
             drawerLayout.closeDrawer(GravityCompat.START);
