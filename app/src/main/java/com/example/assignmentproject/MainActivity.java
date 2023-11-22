@@ -66,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
             else if(item.getItemId() == R.id.decision){
                 Toast.makeText(this, "Decision", Toast.LENGTH_SHORT).show();
             }
+            else if(item.getItemId() == R.id.setting){
+                Toast.makeText(this, "Setting", Toast.LENGTH_SHORT).show();
+            }
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         });
