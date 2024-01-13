@@ -4,31 +4,47 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    SharedPreferences prefs;
     private DrawerLayout drawerLayout;
     private ImageView openDrawer;
+    private TextView budgetAmt;
+    public static final String MyPREFERNCES = "BalancePref";
+    public static final String bAmt = "balanceAmt";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        prefs= getSharedPreferences(MyPREFERNCES,MODE_PRIVATE);
+        String gBalance =prefs.getString(bAmt, "0.00");
+        budgetAmt = (TextView)findViewById(R.id.budgetAmount);
+        budgetAmt.setText(gBalance);
+
+
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
         drawerLayout = findViewById(R.id.drawer_layout);
         openDrawer = findViewById(R.id.hamburger_menu_icon);
         // Set up the hamburger icon and open/close actions
@@ -81,5 +97,16 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i;
+        Log.d("MainActivity","Clicking");
+        if(v.getId() == R.id.budgetCard){
+            Log.d("MainActivity","Move to Edit Balance");
+            i = new Intent(this,EditBalance.class);
+            startActivity(i);
+        }
     }
 }
