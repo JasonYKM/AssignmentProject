@@ -7,7 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name ="primary_color">#21209C</color>
+    <color name ="primary_color">#EAF4FF</color>
     <color name="sidebar_color">#CBF3F0</color>
     <color name = "secondary_color">#FFBF69</color>
+    <color name="valid">#0AFF23</color>
+    <color name="invalid">#FF0A0A</color>
+    <color name="addExpense">#E4DBC4</color>
 </resources>
